@@ -7,14 +7,17 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" >Pussy Cat</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="bs-component">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Pussy Cat</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+
+<div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
       <li class="nav-item ">
         <a class="nav-link" <%= link_to "Accueil", new_user_session_path %> </a>
       </li>
@@ -22,29 +25,27 @@
         <a class="nav-link"  <%= link_to "Nouvel évènement", new_user_session_path %>  </a>
       </li>
       
+
+
       <% if user_signed_in? %>
 
-       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Mon profil
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
+        <div class="dropdown-menu">
           <%= link_to "Mon profil", current_user, class:"dropdown-item" %> 
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %> 
         </div>
-      </li>
+    </li>
 
       <% else %>
 
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          S'inscrire / Se connecter
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" <%= link_to "S'inscrire", new_user_registration_path %> </a>
-          <a class="dropdown-item" <%= link_to "Se connecter", new_user_session_path %> </a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">S'inscrire/Se connecter</a>
+        <div class="dropdown-menu">
+          <%= link_to "S'inscrire", new_user_registration_path %>
+          <%= link_to "Se connecter", new_user_session_path %>
         </div>
-      </li>
+    </li>
 
       <% end %>
 
