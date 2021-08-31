@@ -11,6 +11,27 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :nickName %>
+    <%= form.text_field :nickName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstName %>
+    <%= form.text_field :firstName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastName %>
+    <%= form.text_field :lastName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <input type="hidden" name="user[is_admin]" value="false">
   <div class="actions">
     <%= form.submit %>
   </div>
