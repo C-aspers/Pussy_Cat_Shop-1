@@ -1,0 +1,26 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1>Résumé de la commande</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <% @carts.each do |cart| %>
+    <tr>
+      <td><%= Item.find(Cart.find(2).item_id).image_url %></td>
+      <td><%= Item.find(Cart.find(2).item_id).title %></td>
+      <td><%= Item.find(Cart.find(2).item_id).price %></td>
+    </tr>
+
+  </tbody>
+  <% end %>
+</table>
+<button type="button" class="btn btn-primary">Valider la commande</button>
+</div>
