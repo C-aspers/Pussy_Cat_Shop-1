@@ -1,6 +1,25 @@
+<div class="container">
+  <div class="payment_details">
+    <h1>Addresse</h1>
+    <div class="details_card">
+      <div class="name_address">
+        <div class="first_lastName">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="address">
+          <input type="text" placeholder="Address" />
+          <input type="number" placeholder="Pincode" />
+          <input type="text" placeholder="Country" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="order_summary">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Carts</h1>
+<h1>Résumé de la commande</h1>
 
 <table>
   <thead>
@@ -12,8 +31,11 @@
   <tbody>
     <% @carts.each do |cart| %>
       <tr>
+            <%= @current_user = current_user.id %>
+        <td><%= Cart.find(2).user_id %></td>
+        <td><%= Cart.find(2).item_id %></td>
+        <td><%= Item.find(Cart.find(2).item_id).title %></td>
         <td><%= link_to 'Show', cart %></td>
-        <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
         <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -21,5 +43,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Cart', new_cart_path %>
