@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <center>
+      <h1>CONFIRMATION DE COMMANDE</h1>
+      <p></strong> <%= @user.nickName %>, merci de votre commande!</p>
+      <p>
+        Vous trouverez ci-dessous le récapitulatif de votre commande.
+      </p>
+      <p>
+        Le titre : <%= @item.title %>
+        La description : <%= @item.description %>
+        Le produit que vous avez acheté : <%= @item.image_url %>
+        Le montant total de votre commande .
+      </p><br>
+      <p> À très vite sur <strong>pussycat.com</strong> !</p>
+      </center>
+  </body>
+</html>

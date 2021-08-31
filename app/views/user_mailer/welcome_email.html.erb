@@ -4,13 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Salut <%= @user.nickName %> et bienvenue chez nous !</h1>
-    <p>
-      Tu t'es inscrit sur pussycat.com en utilisant l'e-mail suivant : <%= @user.email %>.
-    </p>
-    <p>
-      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
-    </p>
-    <p> À très vite sur pussycat.com !
+    <center>
+      <h1>CONFIRMATION D'INSCRIPTION</h1>
+      <p>Salut <strong><%= @user.nickName %></strong> et bienvenue chez nous !</p>
+      <p>
+        Tu t'es inscrit sur pussycat.com en utilisant l'e-mail suivant : <strong><%= @user.email %></strong>.
+      </p>
+      <p>
+        Pour accéder à ton espace client, connecte-toi via : <strong><%= @url %></strong>.
+      </p><br>
+      <p> À très vite sur <strong>pussycat.com</strong> !</p>
+      </center>
   </body>
 </html>
