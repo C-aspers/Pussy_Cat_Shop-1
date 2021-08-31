@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="container">
+        <h1>Your profile</h1>
+        <br>
+        <p>
+          <strong>First name:</strong>
+          <%= @user.firstName %>
+        </p>
+
+        <p>
+          <strong>Last name:</strong>
+          <%= @user.lastName %>
+        </p>
+
+        <p>
+          <strong>Nickname:</strong>
+          <%= @user.nickName %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @user.email %>
+        </p>
+
+        <p>
+
+        <br>
+        <a class="btn btn-primary" <%= link_to 'Back', root_path %></a>
+        <a class="btn btn-secondary" <%= link_to 'Edit', edit_user_path(@user) %></a>
+
+      </div>
+    </div>
+    
+
+  </div>
+</div>
